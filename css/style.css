@@ -1364,3 +1364,7 @@ footer {
     gap: 12px;
   }
 }
+
+/* Language Switcher Pill */
+.btn-lang-toggle { background: var(--bg-surface-subtle); border: 1px solid var(--border-subtle); color: var(--text-primary); height: 38px; padding: 0 14px; border-radius: var(--radius-full); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; text-decoration: none; transition: var(--transition-fast); }
+.btn-lang-toggle:hover { background: var(--accent-subtle); border-color: var(--accent-border); color: var(--accent-primary); }
