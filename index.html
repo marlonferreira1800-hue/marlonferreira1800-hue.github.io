@@ -1,185 +1,1133 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="utf-8">
-        <title>Marlon Ferreira | AI & Data Systems Engineer</title>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
-        <!-- Metadados de SEO & Redes Sociais -->
-        <meta property="og:title" content="Marlon Ferreira | AI & Data Systems Engineer" />
-        <meta property="og:description" content="Engenheiro de IA e Dados, fundador da Startup Asclepio (Navegador Desktop Autônomo com IA Nativa) e autor da newsletter Decifrando Dados." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://marlonferreira1800-hue.github.io" />
-        <meta name="description" content="Marlon Ferreira é Engenheiro de Dados e IA, fundador de startup de navegador desktop autônomo com visão multimodal e autor da newsletter Decifrando Dados.">
-        <meta name="keywords" content="Marlon Ferreira, Inteligencia Artificial, Autonomous Browser, Python, PySide6, Machine Learning, Data Science, Decifrando Dados, Asclepio">
-        <meta name="author" content="Marlon Ferreira">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marlon Ferreira | Software Engineer, AI & Multi-Agent Systems</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Engenheiro de Software & Desenvolvedor de IA focado em Sistemas Multi-Agentes, Vision LLMs, HealthTech e Computação Gráfica 3D. Criador do ecossistema Asclépio e autor da newsletter Decifrando Dados.">
+  <meta name="keywords" content="Marlon Ferreira, Software Engineer, Inteligencia Artificial, Sistemas Multi-Agentes, HealthTech, Three.js, Python, FastAPI, Vision LLM, Decifrando Dados, Asclepio">
+  <meta name="author" content="Marlon Ferreira">
 
-        <!-- Bootstrap 4, FontAwesome & Fonte EB Garamond (Padrão Oficial Ryan Wang / Berkeley NLP) -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,600&display=swap" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <div class="container mt-5">
-            <!-- BLOCO 1: Foto, Bio e Links -->
-            <div class="row mb-4">
-                <div class="col-lg-3 col-md-4 mb-3">
-                    <img class="img-fluid rounded profile-img shadow-sm" src="img/profile.jpg" onerror="this.onerror=null; this.src='img/profile.svg';" alt="Marlon Ferreira">
-                    <p class="mt-3">
-                        <i class="fa fa-envelope"></i> <a href="mailto:marlonferreira1800@gmail.com">marlonferreira1800@gmail.com</a>
-                        <br>
-                        <i class="fa fa-map-marker"></i> Brasil
-                    </p>
-                </div>
-                <div class="col-lg-9 col-md-8">
-                    <h1>Marlon Ferreira</h1>
-                    <p>
-                        Sou Engenheiro de Dados & IA e Fundador com foco no desenvolvimento de <b>sistemas autônomos orientados por visão (Vision LLMs)</b>, arquiteturas desktop resilientes e produtos de dados de alto impacto prático.
-                    </p>
-                    <p>
-                        Atualmente, lidero a criação do <b><a href="https://github.com/marlonferreira1800-hue/Startup-Asclepio-navegador-nativo-ia-" target="_blank">Navegador Desktop Autônomo com IA Nativa (Startup Asclepio)</a></b> — uma aplicação desktop pioneira desenvolvida em Python, PySide6 (Qt) e Playwright, desacoplada em 3 camadas e integrada a modelos multimodais de ponta (Google Gemini & NVIDIA NIM) para navegar, raciocinar e automatizar fluxos complexos na web com visão espacial e auto-recuperação de falhas.
-                    </p>
-                    <p>
-                        Também sou curador e autor da newsletter semanal <a href="https://www.linkedin.com/newsletters/decifrando-dados-7513791689808064512/" target="_blank"><b>Decifrando Dados</b></a> no LinkedIn, desmistificando Inteligência Artificial, Machine Learning e Engenharia de Dados sob as lentes essenciais de <b>Tecnologia/TI</b>, <b>Setor Bancário & Financeiro</b> e <b>Negócios</b>.
-                    </p>
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://marlonferreira1800-hue.github.io/">
+  <meta property="og:title" content="Marlon Ferreira | Software Engineer, AI & Multi-Agent Systems">
+  <meta property="og:description" content="Engenheiro de Software & Desenvolvedor de IA focado em Sistemas Multi-Agentes, Vision LLMs, HealthTech e Computação Gráfica 3D.">
+  <meta property="og:image" content="assets/banner.jpg">
 
-                    <p class="mt-4">
-                        [<a href="https://github.com/marlonferreira1800-hue" target="_blank">GitHub</a>] 
-                        [<a href="https://www.linkedin.com/newsletters/decifrando-dados-7513791689808064512/" target="_blank">LinkedIn Newsletter</a>] 
-                        [<a href="https://www.linkedin.com/in/" target="_blank">LinkedIn Perfil</a>] 
-                        [<a href="files/curriculo.pdf" target="_blank">Full CV / Currículo</a>]
-                    </p>
-                </div>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%2300d2ff'>⚡</text></svg>">
+
+  <!-- Google Fonts: Poppins (Heading & UI) + Roboto Mono (Code & Accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Backgrounds -->
+  <div class="ambient-glow">
+    <div class="ambient-circle-1"></div>
+    <div class="ambient-circle-2"></div>
+    <div class="ambient-grid"></div>
+  </div>
+
+  <!-- Custom Cursor Follower (Estilo Tamal Sen) -->
+  <div class="circle-cursor circle-cursor--outer"></div>
+  <div class="circle-cursor circle-cursor--inner"></div>
+
+  <!-- Floating Glass Navbar -->
+  <header class="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="nav-brand">
+        <span class="brand-bracket">&lt;</span>MF <span class="brand-bracket">/&gt;</span>
+        <span class="brand-blink">_</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#projects" class="nav-link"><span>01.</span> Projetos</a></li>
+        <li><a href="#skills" class="nav-link"><span>02.</span> Tecnologias</a></li>
+        <li><a href="#experience" class="nav-link"><span>03.</span> Trajetória</a></li>
+        <li><a href="#about" class="nav-link"><span>04.</span> Sobre</a></li>
+        <li><a href="#newsletter" class="nav-link"><span>05.</span> Newsletter</a></li>
+        <li><a href="#contact" class="nav-link"><span>06.</span> Contato</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="https://github.com/marlonferreira1800-hue" target="_blank" rel="noopener noreferrer" class="btn-resume">
+          <i class="fab fa-github"></i> GitHub Profile
+        </a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Abrir menu de navegação">
+        <i class="fa fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-text-col">
+            <div class="hero-status-pill">
+              <span class="status-dot"></span>
+              <span>Disponível para novos desafios & projetos de IA</span>
             </div>
 
-            <!-- BLOCO 2: Linha do Tempo / Notícias Recentes -->
-            <div class="row">
-                <div class="col">
-                    <h2>Recent News</h2>
-                    <ul class="news-list mt-3">
-                        <li class="news-item">
-                            <span class="news-date">Out 2026</span>
-                            <span class="news-text">Lançamento da arquitetura em 3 camadas estritas (UI, Motor de Navegação e Agente Multimodal) na <b>Startup Asclepio</b>.</span>
-                        </li>
-                        <li class="news-item">
-                            <span class="news-date">Out 2026</span>
-                            <span class="news-text">Publicação das novas edições da <b>Decifrando Dados</b> sobre IA em prevenção a fraudes bancárias, governança e novos modelos de raciocínio.</span>
-                        </li>
-                        <li class="news-item">
-                            <span class="news-date">Set 2026</span>
-                            <span class="news-text">Integração do motor <b>Hermes Agent + Gemini Pro</b> ao ecossistema do <b>Agente Asclepio</b> para resolução autônoma de tarefas de código.</span>
-                        </li>
-                        <li class="news-item">
-                            <span class="news-date">Ago 2026</span>
-                            <span class="news-text">Desenvolvimento de compiladores automatizados de publicação em alta resolução (HTML interativo, PDF A4 vetorial e distribuição no LinkedIn).</span>
-                        </li>
-                    </ul>
-                </div>
+            <p class="hero-eyebrow">&gt; Olá, meu nome é</p>
+            <h1 class="hero-name">Marlon Ferreira.</h1>
+            <h2 class="hero-role">
+              Engenheiro de Software &amp; <span class="highlight">Sistemas Autônomos de IA</span>.
+            </h2>
+
+            <p class="hero-bio">
+              Desenvolvo a intersecção entre <strong>Inteligência Artificial Multimodal</strong>, <strong>Sistemas Multi-Agentes</strong>, <strong>Computação Gráfica 3D</strong> e <strong>HealthTech</strong>. Fundador da <em>Startup Asclépio</em> (Navegador Desktop Autônomo com IA) e autor da newsletter técnica semanal <em>Decifrando Dados</em>.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn-primary">
+                <span>Explorar Projetos</span>
+                <i class="fa fa-arrow-down"></i>
+              </a>
+              <a href="#contact" class="btn-secondary">
+                <i class="fa fa-paper-plane"></i>
+                <span>Fale Comigo</span>
+              </a>
             </div>
 
-            <hr class="my-4">
-
-            <!-- BLOCO 3: Projetos e Produtos em Destaque -->
-            <div class="row" id="projects">
-                <div class="col">
-                    <h2>Projects & Startups</h2>
-                    <ul class="pl-3 mt-3">
-                        <li class="mb-4">
-                            <a href="https://github.com/marlonferreira1800-hue/Startup-Asclepio-navegador-nativo-ia-" target="_blank">
-                                <b>Startup Asclepio: Navegador Desktop Autônomo com IA Nativa</b>
-                            </a>
-                            <span class="badge-tag">Python</span>
-                            <span class="badge-tag">PySide6</span>
-                            <span class="badge-tag">Playwright</span>
-                            <span class="badge-tag">Vision LLM</span>
-                            <span class="badge-tag">Gemini / NVIDIA</span>
-                            <br>
-                            <b>Marlon Ferreira</b>
-                            <br>
-                            <span class="text-muted">
-                                Navegador autônomo com interface nativa em Qt, inspeção visual via Set-of-Marks e loop assíncrono à prova de travamentos. Permite que agentes inteligentes visualizem, decidam e interajam com aplicações web como um humano.
-                            </span>
-                        </li>
-
-                        <li class="mb-4">
-                            <a href="https://www.linkedin.com/newsletters/decifrando-dados-7513791689808064512/" target="_blank">
-                                <b>Decifrando Dados: Newsletter & Ecosystem Hub</b>
-                            </a>
-                            <span class="badge-tag">IA & ML</span>
-                            <span class="badge-tag">Engenharia de Dados</span>
-                            <span class="badge-tag">Setor Bancário</span>
-                            <span class="badge-tag">LinkedIn Official</span>
-                            <br>
-                            <b>Marlon Ferreira</b> (Curadoria e Autoria)
-                            <br>
-                            <span class="text-muted">
-                                Publicação com curadoria semanal de alto nível para mais de centenas de profissionais de tecnologia e finanças. Acompanha ecossistema próprio de compilação automática para LinkedIn, PDF A4 vetorial e Redação Virtual 2D.
-                            </span>
-                        </li>
-
-                        <li class="mb-4">
-                            <a href="https://github.com/marlonferreira1800-hue/agente-asclepio" target="_blank">
-                                <b>Agente Asclepio: Autonomous AI Software Engineer</b>
-                            </a>
-                            <span class="badge-tag">Automação Autônoma</span>
-                            <span class="badge-tag">Hermes Agent</span>
-                            <span class="badge-tag">Gemini Pro</span>
-                            <br>
-                            <b>Marlon Ferreira</b>
-                            <br>
-                            <span class="text-muted">
-                                Agente autônomo projetado para planejamento, auto-correção de falhas e resolução de problemas técnicos complexos de ponta a ponta sem supervisão humana contínua.
-                            </span>
-                        </li>
-
-                        <li class="mb-4">
-                            <a href="https://github.com/marlonferreira1800-hue/asclepio-skills-and-plugins" target="_blank">
-                                <b>Asclepio Skills & Automation Plugins</b>
-                            </a>
-                            <span class="badge-tag">Engenharia de Prompts</span>
-                            <span class="badge-tag">Content Automation</span>
-                            <span class="badge-tag">Multi-Agent</span>
-                            <br>
-                            <b>Marlon Ferreira</b>
-                            <br>
-                            <span class="text-muted">
-                                Conjunto avançado de habilidades, automações de conteúdo diário para LinkedIn, motores de resumos estruturados e agentes auxiliares de pesquisa e engenharia de software.
-                            </span>
-                        </li>
-                    </ul>
-                </div>
+            <div class="hero-socials">
+              <a href="https://github.com/marlonferreira1800-hue" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/newsletters/decifrando-dados-7513791689808064512/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Newsletter">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:marlonferreira1800@gmail.com" class="social-link" title="E-mail">
+                <i class="fa fa-envelope"></i>
+              </a>
+              <a href="https://asclepio-br.netlify.app/" target="_blank" rel="noopener noreferrer" class="social-link" title="Live Netlify App">
+                <i class="fa fa-bolt"></i>
+              </a>
             </div>
+          </div>
 
-            <hr class="my-4">
-
-            <!-- BLOCO 4: Miscelânea -->
-            <div class="row">
-                <div class="col">
-                    <h2>Miscellany</h2>
-                    <ul class="mt-3">
-                        <li>
-                            Entusiasta obstinado por arquitetura de software limpa, computação de alto desempenho, modelos de visão multimodal e café espresso de verdade.
-                        </li>
-                        <li>
-                            Design minimalista inspirado no layout acadêmico clássico de <a href="https://ryanyxw.github.io/" target="_blank">Ryan Wang</a> (UC Berkeley) e <a href="https://nelsonliu.me/" target="_blank">Nelson Liu</a> (Stanford).
-                        </li>
-                    </ul>
+          <!-- Interactive Code / Terminal Card -->
+          <div class="hero-visual-col">
+            <div class="hero-code-card">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
                 </div>
+                <span class="terminal-title">asclepio_engineer_core.py</span>
+                <i class="fa fa-code" style="color: var(--text-muted); font-size: 0.8rem;"></i>
+              </div>
+
+              <div class="terminal-body">
+                <div><span class="code-keyword">from</span> dataclasses <span class="code-keyword">import</span> dataclass</div>
+                <div><span class="code-keyword">from</span> asclepio.agents <span class="code-keyword">import</span> MultiAgentOrchestrator</div>
+                <br>
+                <div><span class="code-comment"># Perfil de Engenharia de Sistemas de IA</span></div>
+                <div><span class="code-keyword">class</span> <span class="code-fn">MarlonFerreira</span>:</div>
+                <div style="padding-left: 20px;"><span class="code-prop">role</span>: <span class="code-str">"Software &amp; AI Systems Engineer"</span></div>
+                <div style="padding-left: 20px;"><span class="code-prop">focus</span>: [<span class="code-str">"Multi-Agent AI"</span>, <span class="code-str">"Vision LLMs"</span>, <span class="code-str">"HealthTech"</span>]</div>
+                <div style="padding-left: 20px;"><span class="code-prop">stack</span>: [<span class="code-str">"Python"</span>, <span class="code-str">"FastAPI"</span>, <span class="code-str">"PySide6"</span>, <span class="code-str">"Three.js"</span>]</div>
+                <div style="padding-left: 20px;"><span class="code-prop">models</span>: [<span class="code-str">"Gemini Pro"</span>, <span class="code-str">"NVIDIA NIM"</span>, <span class="code-str">"Llama 3"</span>]</div>
+                <br>
+                <div style="padding-left: 20px;"><span class="code-keyword">def</span> <span class="code-fn">build_future</span>(<span class="code-var">self</span>):</div>
+                <div style="padding-left: 40px;"><span class="code-keyword">return</span> <span class="code-fn">MultiAgentOrchestrator</span>(guardrails=<span class="code-var">True</span>).<span class="code-fn">run</span>()</div>
+
+                <!-- Profile avatar snippet -->
+                <div class="hero-avatar-box">
+                  <img src="assets/profile.jpg" alt="Marlon Ferreira" onerror="this.onerror=null; this.src='assets/profile.svg';">
+                  <div class="hero-avatar-info">
+                    <h4>Marlon Ferreira</h4>
+                    <p>● Criador do Ecossistema Asclépio</p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
 
-            <!-- BLOCO 5: Rodapé Oficial -->
-            <footer class="pt-4 my-md-4 pt-md-4 border-top">
-                <div class="row justify-content-between align-items-center">
-                    <div class="col-md-6 text-left">
-                        <p class="text-muted mb-0">© Marlon Ferreira, 2026. <i>"Smart people are cooler."</i></p>
-                    </div>
-                    <div class="col-md-6 text-right">
-                        <small class="text-muted">Publicado com orgulho no GitHub Pages</small>
-                    </div>
-                </div>
-            </footer>
         </div>
-    </body>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION (ASSINATURA TAMAL SEN - ALTERNATING MARQUEE) -->
+    <section id="projects">
+      <div class="container">
+        
+        <div style="text-align: center; margin-bottom: 60px;">
+          <span class="section-tag">01. Portfólio de Engenharia</span>
+          <h2 class="section-title">Projetos em <span class="gradient-text">Destaque</span></h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Sistemas em produção, arquiteturas desacopladas e soluções inovadoras em Inteligência Artificial, HealthTech e Computação Visual.
+          </p>
+        </div>
+
+        <div class="featured-projects">
+
+          <!-- PROJETO 01: NAVEGADOR DESKTOP AUTÔNOMO COM IA NATIVA (STARTUP ASCLÉPIO) -->
+          <div class="project-item">
+            <div class="project-content">
+              <span class="project-eyebrow">Projeto em Destaque // 01</span>
+              <h3 class="project-title">
+                <a href="https://github.com/marlonferreira1800-hue/Startup-Asclepio-navegador-nativo-ia-" target="_blank" rel="noopener noreferrer">
+                  Startup Asclépio: Navegador Desktop Autônomo com IA
+                </a>
+              </h3>
+              
+              <div class="project-description-box">
+                Navegador desktop pioneiro com agente de IA visual nativo para automação inteligente da web. Arquitetura resiliente desacoplada em 3 camadas, orquestrando modelos multimodais de ponta (Google Gemini &amp; NVIDIA NIM) com visão espacial e auto-recuperação de erros para navegar, preencher fluxos e raciocinar sobre páginas em tempo real.
+              </div>
+
+              <ul class="project-tags">
+                <li class="project-tag">Python</li>
+                <li class="project-tag">PySide6 (Qt)</li>
+                <li class="project-tag">Playwright</li>
+                <li class="project-tag">Vision LLMs</li>
+                <li class="project-tag">Gemini Pro</li>
+                <li class="project-tag">Windows .exe</li>
+              </ul>
+
+              <div class="project-links">
+                <a href="https://github.com/marlonferreira1800-hue/Startup-Asclepio-navegador-nativo-ia-" target="_blank" rel="noopener noreferrer" class="project-link-btn btn-accent">
+                  <i class="fab fa-github"></i> Ver no GitHub
+                </a>
+                <a href="https://github.com/marlonferreira1800-hue/Navegador-asclepio-ia" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="fa fa-download"></i> Releases &amp; Executável
+                </a>
+              </div>
+            </div>
+
+            <div class="project-preview">
+              <div class="preview-window">
+                <div class="terminal-dots">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <div class="preview-address-bar">
+                  <i class="fa fa-lock" style="color: var(--accent-emerald);"></i>
+                  <span>asclepio://browser-engine/v1.0.4/autonomous-agent</span>
+                </div>
+              </div>
+              <div class="preview-content">
+                <div class="mockup-stat-grid">
+                  <div class="mockup-stat-card">
+                    <span class="label">ARQUITETURA</span>
+                    <span class="val">3 Camadas</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="label">ENGINE MULTIMODAL</span>
+                    <span class="val">Vision Agent</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="label">FRAMEWORK UI</span>
+                    <span class="val">PySide6 (Qt)</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="label">DISTRIBUIÇÃO</span>
+                    <span class="val">Executável .exe</span>
+                  </div>
+                </div>
+                <div class="mockup-live-indicator">
+                  <span class="status-dot"></span>
+                  <span>Agente Visual Ativo — Reconhecimento Semântico de Elementos Web</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJETO 02: ASCLÉPIO — TRIAGEM MÉDICA MULTI-AGENTE -->
+          <div class="project-item reverse">
+            <div class="project-content">
+              <span class="project-eyebrow">Projeto em Destaque // 02</span>
+              <h3 class="project-title">
+                <a href="https://asclepio-br.netlify.app/" target="_blank" rel="noopener noreferrer">
+                  Asclépio: Triagem Médica Multi-Agente &amp; Anamnese Guiada
+                </a>
+              </h3>
+              
+              <div class="project-description-box">
+                Sistema inteligente multi-agente de triagem médica e anamnese guiada com guardrails clínicos determinísticos e validação anti-alucinação médica. Conta com interface web responsiva, validação ética contínua e implantação em produção na nuvem.
+              </div>
+
+              <ul class="project-tags">
+                <li class="project-tag">Python</li>
+                <li class="project-tag">FastAPI</li>
+                <li class="project-tag">Multi-Agent Systems</li>
+                <li class="project-tag">Clinical Guardrails</li>
+                <li class="project-tag">NVIDIA NIM</li>
+                <li class="project-tag">Netlify</li>
+              </ul>
+
+              <div class="project-links">
+                <a href="https://asclepio-br.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn btn-accent">
+                  <i class="fa fa-external-link-alt"></i> Testar Online (Demo)
+                </a>
+                <a href="https://github.com/marlonferreira1800-hue/asclepio.br" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="fab fa-github"></i> Código Fonte
+                </a>
+              </div>
+            </div>
+
+            <div class="project-preview">
+              <div class="preview-window">
+                <div class="terminal-dots">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <div class="preview-address-bar">
+                  <i class="fa fa-heartbeat" style="color: #f43f5e;"></i>
+                  <span>https://asclepio-br.netlify.app/clinical-triage</span>
+                </div>
+              </div>
+              <div class="preview-content">
+                <div class="mockup-stat-grid">
+                  <div class="mockup-stat-card">
+                    <span class="label">CONFIABILIDADE</span>
+                    <span class="val">Anti-Alucinação</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="label">GUARDRAILS</span>
+                    <span class="val">Determinísticos</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="label">API BACKEND</span>
+                    <span class="val">FastAPI + Async</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="label">HEALTH STATUS</span>
+                    <span class="val" style="color: var(--accent-emerald);">Live Netlify</span>
+                  </div>
+                </div>
+                <div class="mockup-live-indicator">
+                  <span class="status-dot"></span>
+                  <span>Validação Clínica em Tempo Real &amp; Triagem Sintomática</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJETO 03: MEDTUTOR 3D — PROFESSOR VIRTUAL & EDUCAÇÃO MÉDICA -->
+          <div class="project-item">
+            <div class="project-content">
+              <span class="project-eyebrow">Projeto em Destaque // 03</span>
+              <h3 class="project-title">
+                <a href="https://github.com/marlonferreira1800-hue/asclepio-tutor" target="_blank" rel="noopener noreferrer">
+                  MedTutor 3D: Professor Virtual &amp; Educação Médica Imersiva
+                </a>
+              </h3>
+              
+              <div class="project-description-box">
+                Plataforma educacional imersiva com Professor Virtual 3D em tempo real construído em WebGL/Three.js. Integra sincronização labial (lip-sync fonético), visualização interativa de camadas de anatomia humana e sintetizador de áudio para ausculta cardíaca e sopros patológicos.
+              </div>
+
+              <ul class="project-tags">
+                <li class="project-tag">JavaScript</li>
+                <li class="project-tag">Three.js</li>
+                <li class="project-tag">WebGL</li>
+                <li class="project-tag">Web Audio API</li>
+                <li class="project-tag">3D Lip-Sync</li>
+                <li class="project-tag">Medical EdTech</li>
+              </ul>
+
+              <div class="project-links">
+                <a href="https://github.com/marlonferreira1800-hue/asclepio-tutor" target="_blank" rel="noopener noreferrer" class="project-link-btn btn-accent">
+                  <i class="fab fa-github"></i> Explorar no GitHub
+                </a>
+              </div>
+            </div>
+
+            <div class="project-preview">
+              <div class="preview-window">
+                <div class="terminal-dots">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <div class="preview-address-bar">
+                  <i class="fa fa-cube" style="color: var(--accent-purple);"></i>
+                  <span>webgl://threejs/asclepio-tutor/3d-canvas</span>
+                </div>
+              </div>
+              <div class="preview-content">
+                <div class="mockup-stat-grid">
+                  <div class="mockup-stat-card">
+                    <span class="label">RENDER ENGINE</span>
+                    <span class="val">Three.js (WebGL)</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="label">ANATOMIA 3D</span>
+                    <span class="val">Multi-Layer</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="label">SÍNTESE SONORA</span>
+                    <span class="val">Web Audio API</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="label">SINCRONIA</span>
+                    <span class="val">Lip-Sync 3D</span>
+                  </div>
+                </div>
+                <div class="mockup-live-indicator">
+                  <span class="status-dot"></span>
+                  <span>Ausculta Cardíaca Interativa &amp; Modelo Anatômico Tridimensional</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJETO 04: ASCLÉPIO FACE — VISÃO COMPUTACIONAL & BIOMETRIA ÓTICA -->
+          <div class="project-item reverse">
+            <div class="project-content">
+              <span class="project-eyebrow">Projeto em Destaque // 04</span>
+              <h3 class="project-title">
+                <a href="https://github.com/marlonferreira1800-hue/asclepio.face" target="_blank" rel="noopener noreferrer">
+                  Asclépio Face: Visão Computacional &amp; Biometria Fisiológica
+                </a>
+              </h3>
+              
+              <div class="project-description-box">
+                Aplicação de visão computacional para análise de ativação fisiológica e pontos biométricos em tempo real via webcam com processamento 100% local e privado. Zero envio de dados para nuvem, garantindo conformidade rigorosa com normas de privacidade em saúde digital.
+              </div>
+
+              <ul class="project-tags">
+                <li class="project-tag">Python</li>
+                <li class="project-tag">OpenCV</li>
+                <li class="project-tag">Facial Landmarks</li>
+                <li class="project-tag">Edge AI</li>
+                <li class="project-tag">SQLite</li>
+                <li class="project-tag">Zero-Cloud Privacy</li>
+              </ul>
+
+              <div class="project-links">
+                <a href="https://github.com/marlonferreira1800-hue/asclepio.face" target="_blank" rel="noopener noreferrer" class="project-link-btn btn-accent">
+                  <i class="fab fa-github"></i> Ver Código no GitHub
+                </a>
+              </div>
+            </div>
+
+            <div class="project-preview">
+              <div class="preview-window">
+                <div class="terminal-dots">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <div class="preview-address-bar">
+                  <i class="fa fa-camera" style="color: var(--accent-emerald);"></i>
+                  <span>local://vision/face-biometrics-feed</span>
+                </div>
+              </div>
+              <div class="preview-content">
+                <div class="mockup-stat-grid">
+                  <div class="mockup-stat-card">
+                    <span class="label">PRIVACIDADE</span>
+                    <span class="val">100% Local</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="label">FRAMEWORK VISÃO</span>
+                    <span class="val">OpenCV + ML</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="label">LATÊNCIA</span>
+                    <span class="val">&lt; 15ms</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="label">ARMAZENAMENTO</span>
+                    <span class="val">SQLite Cripto</span>
+                  </div>
+                </div>
+                <div class="mockup-live-indicator">
+                  <span class="status-dot"></span>
+                  <span>Rastreamento Ótico de Marcadores Fisiológicos em Tempo Real</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJETO 05: DECIFRANDO DADOS — ECOSSISTEMA EDITORIAL & DATA ENGINEERING -->
+          <div class="project-item">
+            <div class="project-content">
+              <span class="project-eyebrow">Projeto em Destaque // 05</span>
+              <h3 class="project-title">
+                <a href="https://www.linkedin.com/newsletters/decifrando-dados-7513791689808064512/" target="_blank" rel="noopener noreferrer">
+                  Decifrando Dados: Newsletter &amp; Pipeline de Compilação
+                </a>
+              </h3>
+              
+              <div class="project-description-box">
+                Ecossistema editorial completo da newsletter oficial <em>Decifrando Dados</em>. Inclui compiladores automatizados em Python para exportação em três canais (HTML responsivo moderno, PDF diagramado e artigos para LinkedIn), fundamentados na metodologia de 5 blocos com tradução clara de 'tecniquês' para TI, Bancos e Negócios.
+              </div>
+
+              <ul class="project-tags">
+                <li class="project-tag">Python</li>
+                <li class="project-tag">Data Pipelines</li>
+                <li class="project-tag">HTML5 / PDF Engines</li>
+                <li class="project-tag">LinkedIn Publishing</li>
+                <li class="project-tag">Technical Writing</li>
+              </ul>
+
+              <div class="project-links">
+                <a href="https://www.linkedin.com/newsletters/decifrando-dados-7513791689808064512/" target="_blank" rel="noopener noreferrer" class="project-link-btn btn-accent">
+                  <i class="fab fa-linkedin"></i> Acessar Newsletter Oficial
+                </a>
+                <a href="https://github.com/marlonferreira1800-hue/decifrando-dados-newsletter" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="fab fa-github"></i> Repositório do Compilador
+                </a>
+              </div>
+            </div>
+
+            <div class="project-preview">
+              <div class="preview-window">
+                <div class="terminal-dots">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <div class="preview-address-bar">
+                  <i class="fa fa-newspaper" style="color: var(--accent-cyan);"></i>
+                  <span>newsletter://linkedin/decifrando-dados</span>
+                </div>
+              </div>
+              <div class="preview-content">
+                <div class="mockup-stat-grid">
+                  <div class="mockup-stat-card">
+                    <span class="label">ESTRUTURA</span>
+                    <span class="val">5 Blocos</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="label">LENTES</span>
+                    <span class="val">TI · Bancos · Negócios</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="label">COMPILAÇÃO</span>
+                    <span class="val">HTML + PDF + Feed</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="label">SLOGAN</span>
+                    <span class="val">"Smart people are cooler"</span>
+                  </div>
+                </div>
+                <div class="mockup-live-indicator">
+                  <span class="status-dot"></span>
+                  <span>Publicação Contínua &amp; Curadoria por Marlon Ferreira</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OTHER NOTEWORTHY PROJECTS (FILTERABLE GRID) -->
+    <section id="other-projects" style="padding-top: 40px;">
+      <div class="container">
+        
+        <div style="text-align: center; margin-bottom: 40px;">
+          <span class="section-tag">Arquivo Aberto</span>
+          <h2 class="section-title">Outros Projetos &amp; <span class="gradient-text">Repositórios</span></h2>
+          <p class="section-subtitle" style="margin: 0 auto 30px;">
+            Uma seleção de ferramentas de IA, bibliotecas, agentes e projetos experimentais mantidos no GitHub.
+          </p>
+
+          <!-- Filter Tabs (Estilo Tamal Sen) -->
+          <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">Todos os Projetos</button>
+            <button class="filter-btn" data-filter="ai">IA &amp; Agentes</button>
+            <button class="filter-btn" data-filter="health">HealthTech &amp; 3D</button>
+            <button class="filter-btn" data-filter="desktop">Desktop &amp; Automação</button>
+            <button class="filter-btn" data-filter="opensource">Open Source</button>
+          </div>
+        </div>
+
+        <div class="other-projects-grid">
+
+          <!-- Card 1: Agente Asclepio -->
+          <div class="repo-card" data-category="ai opensource">
+            <div>
+              <div class="repo-card-top">
+                <i class="far fa-folder folder-icon"></i>
+                <div class="repo-external-links">
+                  <a href="https://github.com/marlonferreira1800-hue/agente-asclepio" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <h4 class="repo-title">
+                <a href="https://github.com/marlonferreira1800-hue/agente-asclepio" target="_blank" rel="noopener noreferrer">
+                  agente-asclepio
+                </a>
+              </h4>
+              <p class="repo-desc">
+                ⚡ Desenvolvedor de IA autônomo e solucionador de problemas de ponta a ponta integrado com o motor Hermes Agent e modelos Gemini Pro.
+              </p>
+            </div>
+            <ul class="repo-tech-list">
+              <li>Python</li>
+              <li>Hermes Agent</li>
+              <li>Gemini API</li>
+              <li>Autonomous Loop</li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Asclepio Skills and Plugins -->
+          <div class="repo-card" data-category="ai opensource">
+            <div>
+              <div class="repo-card-top">
+                <i class="far fa-folder folder-icon"></i>
+                <div class="repo-external-links">
+                  <a href="https://github.com/marlonferreira1800-hue/asclepio-skills-and-plugins" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <h4 class="repo-title">
+                <a href="https://github.com/marlonferreira1800-hue/asclepio-skills-and-plugins" target="_blank" rel="noopener noreferrer">
+                  asclepio-skills-and-plugins
+                </a>
+              </h4>
+              <p class="repo-desc">
+                Coleção de plugins e skills cognitivas para IA focada em educação, medicina, resumos visuais e automação de conteúdo com pipelines ativos.
+              </p>
+            </div>
+            <ul class="repo-tech-list">
+              <li>Python</li>
+              <li>Cognitive Skills</li>
+              <li>Prompt Engineering</li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Duolingo Medicina -->
+          <div class="repo-card" data-category="health">
+            <div>
+              <div class="repo-card-top">
+                <i class="far fa-folder folder-icon"></i>
+                <div class="repo-external-links">
+                  <a href="https://github.com/marlonferreira1800-hue/Duolingo-medicina-" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <h4 class="repo-title">
+                <a href="https://github.com/marlonferreira1800-hue/Duolingo-medicina-" target="_blank" rel="noopener noreferrer">
+                  Duolingo-medicina-
+                </a>
+              </h4>
+              <p class="repo-desc">
+                MedAsclepio: plataforma de micro-aprendizagem ativa gamificada para conceitos médicos com repetição espaçada e flashcards interativos.
+              </p>
+            </div>
+            <ul class="repo-tech-list">
+              <li>JavaScript</li>
+              <li>Gamification</li>
+              <li>Health Education</li>
+            </ul>
+          </div>
+
+          <!-- Card 4: Chat Navegador -->
+          <div class="repo-card" data-category="desktop ai">
+            <div>
+              <div class="repo-card-top">
+                <i class="far fa-folder folder-icon"></i>
+                <div class="repo-external-links">
+                  <a href="https://github.com/marlonferreira1800-hue/chat-navegador-" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <h4 class="repo-title">
+                <a href="https://github.com/marlonferreira1800-hue/chat-navegador-" target="_blank" rel="noopener noreferrer">
+                  chat-navegador-
+                </a>
+              </h4>
+              <p class="repo-desc">
+                Interface de assistência multimodal integrada ao navegador para inspeção de páginas, sumarização de conteúdo e execução de ações.
+              </p>
+            </div>
+            <ul class="repo-tech-list">
+              <li>Python</li>
+              <li>Multimodal Chat</li>
+              <li>DOM Parsing</li>
+            </ul>
+          </div>
+
+          <!-- Card 5: Open-source-Presentation-ia -->
+          <div class="repo-card" data-category="ai opensource">
+            <div>
+              <div class="repo-card-top">
+                <i class="far fa-folder folder-icon"></i>
+                <div class="repo-external-links">
+                  <a href="https://github.com/marlonferreira1800-hue/Open-source-Presetation-ia-" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <h4 class="repo-title">
+                <a href="https://github.com/marlonferreira1800-hue/Open-source-Presetation-ia-" target="_blank" rel="noopener noreferrer">
+                  Open-source-Presentation-ia-
+                </a>
+              </h4>
+              <p class="repo-desc">
+                Gerador open source de apresentações e decks de slides assistidos por inteligência artificial com formatação automática.
+              </p>
+            </div>
+            <ul class="repo-tech-list">
+              <li>JavaScript</li>
+              <li>AI Deck Generator</li>
+              <li>Presentations</li>
+            </ul>
+          </div>
+
+          <!-- Card 6: Dados e Inteligência Artificial -->
+          <div class="repo-card" data-category="opensource">
+            <div>
+              <div class="repo-card-top">
+                <i class="far fa-folder folder-icon"></i>
+                <div class="repo-external-links">
+                  <a href="https://github.com/marlonferreira1800-hue/Dados-e-Intelig-ncia-artificial-" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <h4 class="repo-title">
+                <a href="https://github.com/marlonferreira1800-hue/Dados-e-Intelig-ncia-artificial-" target="_blank" rel="noopener noreferrer">
+                  Dados-e-Inteligência-artificial
+                </a>
+              </h4>
+              <p class="repo-desc">
+                Laboratório prático de algoritmos de Machine Learning, pipelines de dados analíticos, estatística aplicada e modelos preditivos.
+              </p>
+            </div>
+            <ul class="repo-tech-list">
+              <li>Python</li>
+              <li>Data Science</li>
+              <li>Machine Learning</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS & COMPETÊNCIAS (ESTILO GRID MODERNO TAMAL SEN) -->
+    <section id="skills">
+      <div class="container">
+        
+        <div style="text-align: center; margin-bottom: 60px;">
+          <span class="section-tag">02. Stack &amp; Capacidades</span>
+          <h2 class="section-title">Tecnologias &amp; <span class="gradient-text">Habilidades</span></h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Domínio técnico construído com rigor em sistemas de alta complexidade, arquiteturas desacopladas e processamento de tempo real.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Card 1: IA & Sistemas Multi-Agentes -->
+          <div class="skill-category-card">
+            <div class="skill-header">
+              <div class="skill-icon-badge">
+                <i class="fa fa-brain"></i>
+              </div>
+              <h3 class="skill-title">Inteligência Artificial &amp; Agentes</h3>
+            </div>
+            <ul class="skill-items">
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> Sistemas Multi-Agentes</span>
+                <span class="skill-pill">Avançado</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> Vision LLMs (Google Gemini)</span>
+                <span class="skill-pill">Especialista</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> NVIDIA NIM &amp; Llama 3</span>
+                <span class="skill-pill">Produção</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> Guardrails Clínicos Determinísticos</span>
+                <span class="skill-pill">Core</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> Engenharia de Ferramentas &amp; Prompts</span>
+                <span class="skill-pill">Domínio</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Backend & Sistemas -->
+          <div class="skill-category-card">
+            <div class="skill-header">
+              <div class="skill-icon-badge">
+                <i class="fa fa-server"></i>
+              </div>
+              <h3 class="skill-title">Backend &amp; Desktop</h3>
+            </div>
+            <ul class="skill-items">
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> Python (FastAPI &amp; AsyncIO)</span>
+                <span class="skill-pill">Avançado</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> PySide6 (Qt) Desktop</span>
+                <span class="skill-pill">Nativo</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> Playwright &amp; Web CDP</span>
+                <span class="skill-pill">Automação</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> Pydantic v2 &amp; Validações</span>
+                <span class="skill-pill">Rigor</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> SQLite &amp; Persistência Local</span>
+                <span class="skill-pill">Edge</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Visão Computacional & 3D Web -->
+          <div class="skill-category-card">
+            <div class="skill-header">
+              <div class="skill-icon-badge">
+                <i class="fa fa-cube"></i>
+              </div>
+              <h3 class="skill-title">Computação Visual &amp; 3D</h3>
+            </div>
+            <ul class="skill-items">
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> Three.js &amp; WebGL 3D</span>
+                <span class="skill-pill">Gráficos</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> OpenCV &amp; Visão Computacional</span>
+                <span class="skill-pill">Tempo Real</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> Web Audio API (Sons &amp; Ausculta)</span>
+                <span class="skill-pill">DSP</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> JavaScript / TypeScript Moderno</span>
+                <span class="skill-pill">Frontend</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> Responsive UX &amp; Design Glassmorphic</span>
+                <span class="skill-pill">UI/UX</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 4: DevOps & Engenharia de Dados -->
+          <div class="skill-category-card">
+            <div class="skill-header">
+              <div class="skill-icon-badge">
+                <i class="fa fa-gears"></i>
+              </div>
+              <h3 class="skill-title">Engenharia de Dados &amp; DevOps</h3>
+            </div>
+            <ul class="skill-items">
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> Git &amp; GitHub Actions CI/CD</span>
+                <span class="skill-pill">Pipelines</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> Compiladores Multi-Formato</span>
+                <span class="skill-pill">Autônomo</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> Netlify &amp; Nuvem Desacoplada</span>
+                <span class="skill-pill">Deploy</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> Modelagem de Dados &amp; Pipelines</span>
+                <span class="skill-pill">ETL/ELT</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name"><i class="fa fa-chevron-right"></i> Empacotamento Windows Executável</span>
+                <span class="skill-pill">PyInstaller</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TRAJETÓRIA / EXPERIENCE SECTION -->
+    <section id="experience">
+      <div class="container">
+        
+        <div style="text-align: center; margin-bottom: 60px;">
+          <span class="section-tag">03. Experiência &amp; Liderança</span>
+          <h2 class="section-title">Minha <span class="gradient-text">Trajetória</span></h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Histórico de desenvolvimento de produtos pioneiros, liderança técnica e publicações.
+          </p>
+        </div>
+
+        <div class="timeline">
+          
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2024 — PRESENTE</div>
+            <h3 class="timeline-role">Fundador &amp; Lead AI Engineer</h3>
+            <h4 class="timeline-company">Startup Asclépio — Navegador Desktop com IA Nativa</h4>
+            <div class="timeline-desc">
+              Idealização e arquitetura completa de um navegador desktop autônomo baseado em Python, PySide6 e automação via Chromium/Playwright. Integração com modelos multimodais de visão para navegação espacial, resolução de formulários dinâmicos e auto-recuperação de falhas em tempo real.
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2024 — PRESENTE</div>
+            <h3 class="timeline-role">Curador &amp; Autor Oficial</h3>
+            <h4 class="timeline-company">Newsletter Decifrando Dados (LinkedIn)</h4>
+            <div class="timeline-desc">
+              Criação e manutenção semanal da newsletter oficial com leitura em 3 a 4 minutos. Tradução técnica de temas complexos de IA, Machine Learning e Engenharia de Dados para três públicos estratégicos: TI, Bancos/Finanças e Negócios. Desenvolvimento de suíte de compilação automatizada com geração de PDF, HTML e textos para LinkedIn.
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023 — 2024</div>
+            <h3 class="timeline-role">Arquiteto de Soluções HealthTech &amp; IA</h3>
+            <h4 class="timeline-company">Ecossistema Aberto Asclépio</h4>
+            <div class="timeline-desc">
+              Engenharia de software voltada para saúde digital, incluindo o sistema de triagem com guardrails clínicos determinísticos (asclepio.br), ambiente educacional 3D em Three.js (asclepio-tutor) e biometria óptica por visão computacional (asclepio.face).
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <div class="container">
+        
+        <div class="about-grid">
+          
+          <div class="about-text">
+            <span class="section-tag">04. Filosofia de Engenharia</span>
+            <h2 class="section-title">Sobre <span class="gradient-text">Marlon Ferreira</span></h2>
+            
+            <p>
+              Sou apaixonado por construir software que não apenas funcione com elegância, mas que <strong>solucione dores operacionais complexas</strong> por meio de agentes inteligentes e arquiteturas resilientes.
+            </p>
+
+            <p>
+              Minha trajetória combina o rigor do <strong>desenvolvimento de software orientado a sistemas desacoplados</strong> com a vanguarda dos <strong>Modelos de Linguagem Multimodais (Vision LLMs)</strong> e <strong>Computação Gráfica 3D interativa na web</strong>.
+            </p>
+
+            <p>
+              Acredito que inteligência artificial sem guardrails ou utilidade tangível é apenas ruído. Por isso, cada projeto que construo — desde o navegador desktop com visão espacial até a triagem clínica — foca em <strong>estabilidade determinística, código limpo e impacto mensurável</strong>.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-box">
+                <div class="number">10+</div>
+                <div class="label">Repositórios &amp; Sistemas no GitHub</div>
+              </div>
+              <div class="highlight-box">
+                <div class="number">100%</div>
+                <div class="label">Foco em IA Prática &amp; Sem Alucinações</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-image-wrapper">
+            <div class="about-image-frame">
+              <img src="assets/banner.jpg" alt="Marlon Ferreira - Artificial Intelligence & HealthTech">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- NEWSLETTER CALLOUT SECTION -->
+    <section id="newsletter" style="padding-top: 40px; padding-bottom: 70px;">
+      <div class="container">
+        
+        <div class="contact-card" style="background: radial-gradient(circle at top center, rgba(139, 92, 246, 0.1) 0%, var(--bg-card) 70%);">
+          <span class="section-tag">05. Conteúdo Semanal</span>
+          <h2 class="section-title">Newsletter <span class="gradient-text">Decifrando Dados</span></h2>
+          <p>
+            <em>"Smart people are cooler."</em> Toda semana, uma apuração aprofundada traduzindo Ciência de Dados, IA e Machine Learning para <strong>TI</strong>, <strong>Setor Bancário &amp; Finanças</strong> e <strong>Negócios</strong>, sem fórmulas soltas e sem enrolação.
+          </p>
+
+          <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+            <a href="https://www.linkedin.com/newsletters/decifrando-dados-7513791689808064512/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: linear-gradient(135deg, #0077b5, #00a0dc);">
+              <i class="fab fa-linkedin"></i>
+              <span>Assinar no LinkedIn Gratuitamente</span>
+            </a>
+            <a href="https://github.com/marlonferreira1800-hue/decifrando-dados-newsletter" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              <i class="fab fa-github"></i>
+              <span>Ver Código do Compilador</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION (ESTILO TAMAL SEN) -->
+    <section id="testimonials">
+      <div class="container">
+        
+        <div style="text-align: center; margin-bottom: 60px;">
+          <span class="section-tag">Reconhecimento &amp; Parcerias</span>
+          <h2 class="section-title">Feedback &amp; <span class="gradient-text">Colaborações</span></h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            O que desenvolvedores, pares de tecnologia e líderes dizem sobre a metodologia de trabalho e rigor técnico de Marlon Ferreira.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "A capacidade do Marlon de pegar problemas de alta complexidade em visão computacional e orquestração de IA e transformar em um aplicativo desktop limpo e funcional é impressionante. Engenharia de altíssimo nível."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AI</div>
+              <div class="author-info">
+                <h4>Colaborador de Engenharia</h4>
+                <p>Comunidade de IA &amp; Multi-Agentes</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "O ecossistema Asclépio demonstra uma rara união de rigor metodológico com usabilidade real. O uso de guardrails clínicos determinísticos e Three.js para educação médica eleva o padrão de HealthTech no Brasil."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">HT</div>
+              <div class="author-info">
+                <h4>Revisor Clínico &amp; HealthTech</h4>
+                <p>Educação Médica Digital</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "A newsletter Decifrando Dados é uma das poucas leituras semanais que realmente traduzem a tecnologia para o impacto financeiro e corporativo sem perder a profundidade técnica. Curadoria de excelência."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">DD</div>
+              <div class="author-info">
+                <h4>Leitor Assíduo &amp; Especialista TI</h4>
+                <p>Setor Bancário &amp; Corporativo</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <div class="container">
+        
+        <div class="contact-card">
+          <span class="section-tag">06. Próximo Passo</span>
+          <h2 class="section-title">Vamos Construir Algo <span class="gradient-text">Extraordinário?</span></h2>
+          <p>
+            Seja para desenvolvimento de agentes de IA personalizados, projetos em HealthTech, consultoria técnica ou parcerias estratégicas, minha caixa de entrada está sempre aberta.
+          </p>
+
+          <div class="email-copy-box">
+            <span class="email-address" id="emailAddressText">marlonferreira1800@gmail.com</span>
+            <button class="btn-copy" id="copyEmailBtn" aria-label="Copiar endereço de e-mail">
+              <i class="fa fa-clone"></i>
+              <span>Copiar</span>
+            </button>
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+            <a href="mailto:marlonferreira1800@gmail.com" class="btn-primary">
+              <i class="fa fa-envelope"></i>
+              <span>Enviar Mensagem Direta</span>
+            </a>
+            <a href="https://github.com/marlonferreira1800-hue" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              <i class="fab fa-github"></i>
+              <span>Visitar GitHub</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#home" class="footer-link">Início</a>
+          <a href="#projects" class="footer-link">Projetos</a>
+          <a href="#skills" class="footer-link">Stack</a>
+          <a href="#experience" class="footer-link">Trajetória</a>
+          <a href="#contact" class="footer-link">Contato</a>
+          <a href="https://github.com/marlonferreira1800-hue" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        </div>
+        <p>
+          Projetado &amp; Desenvolvido com foco em precisão por <strong>Marlon Ferreira</strong>. Inspirado na estética moderna de <em>tamalsen.dev</em>.
+        </p>
+        <p style="color: var(--text-muted); font-size: 0.76rem;">
+          © 2026 Marlon Ferreira. Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Voltar ao início">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toastNotice">
+    <i class="fa fa-check-circle" style="color: var(--accent-emerald);"></i>
+    <span class="toast-msg">Notificação</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
 </html>
