@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café de Reparos — traga o quebrado, leve consertado</title>
+<meta name="description" content="Encontro mensal do bairro para consertar de graça roupas, eletrônicos, móveis e brinquedos. Próximo encontro: sábado, 14 de junho, 10h às 14h.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Space+Grotesk:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tinta:#1B1B16;
+  --corpo:#3A382F;
+  --papel:#F5EFE3;
+  --papel-2:#EDE5D2;
+  --garrafa:#22392B;
+  --garrafa-2:#2C4634;
+  --garrafa-3:#182A20;
+  --mostarda:#E0A526;
+  --filete:rgba(27,27,22,.16);
+  --filete-claro:rgba(245,239,227,.18);
+  --fonte-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --fonte-ui:"Space Grotesk",system-ui,-apple-system,sans-serif;
+  --raio:12px;
+  --container:1120px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+}
+body{
+  font-family:var(--fonte-ui);
+  font-size:1.0625rem;
+  line-height:1.65;
+  color:var(--tinta);
+  background:var(--papel);
+}
+::selection{background:var(--mostarda);color:var(--tinta)}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--mostarda);outline-offset:3px;border-radius:4px}
+.claro :focus-visible{outline-color:var(--garrafa)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip-link{
+  position:absolute;left:1rem;top:-4rem;z-index:50;
+  background:var(--tinta);color:var(--papel);padding:.6rem 1rem;border-radius:8px;
+  font-weight:600;text-decoration:none;transition:top .2s ease;
+}
+.skip-link:focus{top:1rem}
+.container{max-width:var(--container);margin-inline:auto;padding-inline:clamp(20px,5vw,48px)}
+
+.escuro{background:var(--garrafa);color:var(--papel)}
+.claro{background:var(--papel);color:var(--tinta)}
+
+.site-header{
+  background:var(--garrafa);color:var(--papel);
+  border-bottom:1px solid var(--filete-claro);
+}
+.site-header .container{
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+  padding-block:1.1rem;flex-wrap:wrap;
+}
+.wordmark{
+  font-family:var(--fonte-display);font-weight:600;font-size:1.35rem;
+  text-decoration:none;letter-spacing:-.01em;
+}
+.wordmark .dot{color:var(--mostarda)}
+.nav{display:flex;align-items:center;gap:1.75rem;flex-wrap:wrap}
+.nav a{
+  color:var(--papel);text-decoration:none;font-weight:500;font-size:.95rem;
+  border-bottom:2px solid transparent;padding-bottom:2px;
+}
+.nav a:hover{border-bottom-color:var(--mostarda)}
+.nav .chip{
+  border:1px solid var(--filete-claro);border-radius:999px;
+  padding:.35rem .9rem;font-size:.85rem;font-weight:600;color:var(--mostarda);
+}
+
+.hero{padding-block:clamp(56px,9vw,110px) clamp(48px,7vw,88px)}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2.5rem,6vw,5rem);
+  align-items:center;
+}
+.hero h1{
+  font-family:var(--fonte-display);font-weight:600;
+  font-size:clamp(2.7rem,6.4vw,4.9rem);line-height:1.03;letter-spacing:-.02em;
+  margin-bottom:1.4rem;
+}
+.hero h1 .dot{color:var(--mostarda)}
+.lede{
+  font-size:clamp(1.05rem,1.6vw,1.25rem);line-height:1.6;
+  color:rgba(245,239,227,.88);max-width:44ch;margin-bottom:2.2rem;
+}
+.cta-row{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  font-family:var(--fonte-ui);font-weight:600;font-size:1rem;
+  padding:.95rem 1.6rem;border-radius:10px;text-decoration:none;cursor:pointer;
+  border:1.5px solid var(--tinta);
+  transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease,border-color .18s ease;
+}
+.btn-primary{background:var(--mostarda);color:var(--tinta)}
+.btn-primary:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--tinta)}
+.btn-primary:active{transform:translate(0,0);box-shadow:0 0 0 var(--tinta)}
+.btn-ghost{background:transparent;color:var(--papel);border-color:rgba(245,239,227,.45)}
+.btn-ghost:hover{border-color:var(--papel);background:rgba(245,239,227,.07)}
+
+.hero-visual{position:relative}
+.pegboard{
+  background:var(--garrafa-2);
+  border:1px solid var(--filete-claro);
+  border-radius:var(--raio);
+  overflow:hidden;
+  aspect-ratio:4/3.1;
+}
+.pegboard svg{width:100%;height:100%}
+.ticket{
+  position:absolute;left:-8%;bottom:-9%;
+  width:min(320px,78%);
+  background:var(--papel);color:var(--tinta);
+  border:1.5px solid var(--tinta);border-radius:14px;
+  box-shadow:10px 10px 0 var(--garrafa-3);
+  transform:rotate(-1.6deg);
+  padding:1.4rem 1.5rem 1.3rem;
+}
+.ticket-topo{display:flex;align-items:center;justify-content:space-between;margin-bottom:.9rem}
+.ticket-topo .rotulo{font-size:.85rem;font-weight:600;color:var(--corpo)}
+.furo{
+  width:22px;height:22px;border-radius:50%;
+  background:var(--garrafa-2);
+  box-shadow:inset 0 2px 4px rgba(0,0,0,.45);
+}
+.ticket-data{font-family:var(--fonte-display);font-weight:700;font-size:1.7rem;line-height:1.1;letter-spacing:-.01em}
+.ticket-linha{display:flex;align-items:center;gap:.5rem;margin-top:.55rem;font-size:.92rem;color:var(--corpo)}
+.ticket-linha .ic{width:17px;height:17px;color:var(--garrafa);flex:none}
+.ticket-div{border:none;border-top:2px dashed var(--filete);margin:1rem 0 .9rem}
+.contador-num{font-family:var(--fonte-display);font-weight:700;font-size:2.6rem;line-height:1;color:var(--garrafa)}
+.contador-rotulo{font-size:.88rem;color:var(--corpo);margin-top:.25rem}
+.ticket-nota{margin-top:.8rem;font-size:.8rem;color:var(--corpo);border-top:1px solid var(--filete);padding-top:.7rem}
+
+.ticker{
+  background:var(--mostarda);color:var(--tinta);
+  border-block:1.5px solid var(--tinta);
+  overflow:hidden;padding-block:.65rem;
+}
+.ticker-track{display:flex;width:max-content}
+.ticker ul{display:flex;list-style:none;gap:2.2rem;padding-right:2.2rem}
+.ticker li{font-weight:500;font-size:.95rem;white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){
+  .ticker-track{animation:marquee 30s linear infinite}
+  .ticker:hover .ticker-track{animation-play-state:paused}
+}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+section{padding-block:clamp(64px,9vw,112px)}
+.sec-cabecalho{max-width:60ch;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.sec-cabecalho h2{
+  font-family:var(--fonte-display);font-weight:600;
+  font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.1;letter-spacing:-.015em;
+  margin-bottom:.9rem;
+}
+.sec-cabecalho p{color:var(--corpo);font-size:1.08rem;max-width:52ch}
+.escuro .sec-cabecalho p{color:rgba(245,239,227,.85)}
+
+.passos{list-style:none;display:grid;grid-template-columns:repeat(3,1fr)}
+.passos li{padding:0 clamp(1.2rem,2.5vw,2.2rem)}
+.passos li:first-child{padding-left:0}
+.passos li:last-child{padding-right:0}
+.passos li + li{border-left:1px solid var(--filete)}
+.passo-num{
+  font-family:var(--fonte-display);font-weight:600;font-style:italic;
+  font-size:3.2rem;line-height:1;color:var(--garrafa);
+  display:inline-block;margin-bottom:1rem;
+  border-bottom:4px solid var(--mostarda);padding-bottom:.35rem;
+}
+.passos h3{font-family:var(--fonte-display);font-size:1.35rem;font-weight:600;margin-bottom:.55rem;letter-spacing:-.01em}
+.passos p{color:var(--corpo);font-size:.98rem}
+
+.categorias{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0 clamp(1.5rem,3vw,2.5rem)}
+.categorias li{border-top:1px solid var(--filete-claro);padding-block:1.6rem}
+.categorias .ic{width:26px;height:26px;color:var(--mostarda);margin-bottom:.9rem}
+.categorias h3{font-size:1.05rem;font-weight:600;margin-bottom:.35rem}
+.categorias p{font-size:.93rem;color:rgba(245,239,227,.78)}
+.escuro .sec-cabecalho h2{color:var(--papel)}
+.aviso-escuro{margin-top:2.2rem;max-width:62ch;font-size:.95rem;color:rgba(245,239,227,.75);border-left:3px solid var(--mostarda);padding-left:1rem}
+
+.form-wrap{max-width:620px}
+.form-wrap > p{color:var(--corpo);margin-bottom:2rem;max-width:52ch}
+.seg-group{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.seg{cursor:pointer}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg span{
+  display:inline-block;padding:.65rem 1.25rem;border-radius:999px;
+  border:1.5px solid var(--tinta);font-weight:600;font-size:.95rem;
+  transition:background-color .18s ease,color .18s ease;
+}
+.seg input:checked + span{background:var(--garrafa);color:var(--papel);border-color:var(--garrafa)}
+.seg input:focus-visible + span{outline:3px solid var(--garrafa);outline-offset:3px}
+.seg span:hover{background:var(--papel-2)}
+.seg input:checked + span:hover{background:var(--garrafa)}
+.campo{margin-bottom:1.3rem}
+.campo label{display:block;font-weight:600;font-size:.95rem;margin-bottom:.45rem}
+.campo input[type="text"],.campo input[type="email"]{
+  width:100%;font:inherit;font-size:1rem;color:var(--tinta);
+  background:#fff;border:1.5px solid var(--tinta);border-radius:10px;
+  padding:.8rem 1rem;
+}
+.campo input::placeholder{color:rgba(58,56,47,.55)}
+.campo input[aria-invalid="true"]{border-color:#A3341F;background:#FBEDE8}
+.erro{color:#A3341F;font-size:.88rem;font-weight:500;margin-top:.4rem}
+.form-nota{font-size:.85rem;color:var(--corpo);margin-top:1rem}
+.sucesso{
+  border:1.5px solid var(--tinta);border-radius:var(--raio);
+  background:var(--papel-2);padding:2rem;
+  box-shadow:8px 8px 0 var(--mostarda);
+}
+.sucesso h3{font-family:var(--fonte-display);font-size:1.7rem;font-weight:700;margin-bottom:.6rem;letter-spacing:-.01em}
+.sucesso h3 .ic{display:inline-block;width:26px;height:26px;color:var(--garrafa);vertical-align:-4px;margin-right:.4rem}
+.sucesso p{color:var(--corpo);margin-bottom:1.4rem;max-width:46ch}
+@media (prefers-reduced-motion:no-preference){
+  .sucesso{animation:rise .5s cubic-bezier(.22,.7,.25,1) both}
+}
+
+.site-footer{border-top:1px solid var(--filete-claro);padding-block:clamp(48px,7vw,72px) 2rem}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem}
+.footer-grid h2{font-size:.85rem;font-weight:700;letter-spacing:.02em;margin-bottom:1rem;color:var(--mostarda)}
+.footer-grid p,.footer-grid li{font-size:.95rem;color:rgba(245,239,227,.82)}
+.footer-grid ul{list-style:none}
+.footer-grid li{display:flex;align-items:center;gap:.55rem;margin-bottom:.55rem}
+.footer-grid li .ic{width:16px;height:16px;color:var(--mostarda);flex:none}
+.footer-brand .wordmark{font-size:1.6rem;display:inline-block;margin-bottom:.7rem}
+.footer-bottom{
+  border-top:1px solid var(--filete-claro);padding-top:1.4rem;
+  display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  font-size:.85rem;color:rgba(245,239,227,.6);
+}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveal{animation:rise .8s cubic-bezier(.22,.7,.25,1) both;animation-delay:var(--d,0s)}
+}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:4.5rem}
+  .hero-visual{max-width:520px}
+  .ticket{left:auto;right:-4px;bottom:-14%}
+  .passos{grid-template-columns:1fr}
+  .passos li{padding:1.4rem 0}
+  .passos li:first-child{padding-top:0}
+  .passos li + li{border-left:none;border-top:1px solid var(--filete)}
+  .categorias{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .categorias{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .ticket{position:static;transform:rotate(-1.2deg);width:100%;margin-top:1.2rem}
+  .hero-visual{max-width:none}
+  .nav{gap:1.1rem}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></symbol>
+    <symbol id="i-shirt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></symbol>
+    <symbol id="i-armchair" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/><path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0Z"/><path d="M5 18v2"/><path d="M19 18v2"/></symbol>
+    <symbol id="i-puzzle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.581-.353.917-.303.515.077.877.528 1.073 1.01a2.5 2.5 0 1 0 3.259-3.259c-.482-.196-.933-.558-1.01-1.073-.05-.336.062-.676.303-.917l1.525-1.525A2.402 2.402 0 0 1 12 1.998c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"/></symbol>
+    <symbol id="i-bike" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href="#topo">Café de Reparos<span class="dot">.</span></a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#consertamos">O que consertamos</a>
+      <a href="#participe">Participe</a>
+      <span class="chip">14 jun, 10h</span>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <div class="escuro" id="topo">
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="container hero-grid">
+        <div>
+          <h1 id="titulo-hero" class="reveal" style="--d:.05s">Trouxe o quebrado.<br>Leve consertado<span class="dot">.</span></h1>
+          <p class="lede reveal" style="--d:.18s">Uma vez por mês, voluntários do bairro se reúnem para consertar de graça o que você trouxer. Você acompanha o conserto de perto e ainda aprende como fazer em casa.</p>
+          <div class="cta-row reveal" style="--d:.3s">
+            <a class="btn btn-primary" href="#participe" data-role="item">Levar um item</a>
+            <a class="btn btn-ghost" href="#participe" data-role="voluntario">Quero ser voluntário</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal" style="--d:.4s">
+          <div class="pegboard" aria-hidden="true">
+            <svg viewBox="0 0 420 320" role="img">
+              <defs>
+                <pattern id="pegs" width="22" height="22" patternUnits="userSpaceOnUse">
+                  <circle cx="11" cy="11" r="1.7" fill="#3B5A46"/>
+                </pattern>
+              </defs>
+              <rect width="420" height="320" fill="url(#pegs)"/>
+              <rect x="24" y="256" width="372" height="10" rx="3" fill="#1B2E22"/>
+              <rect x="44" y="228" width="34" height="28" rx="3" fill="#E0A526"/>
+              <rect x="86" y="236" width="22" height="20" rx="3" fill="#F5EFE3" opacity=".85"/>
+              <g transform="translate(52 46) rotate(-14) scale(2.7)">
+                <circle cx="12" cy="12" r="1.4" fill="#F5EFE3"/>
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" fill="none" stroke="#E0A526" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <g transform="translate(178 40) rotate(9) scale(2.7)">
+                <line x1="12" y1="2" x2="12" y2="14" stroke="#F5EFE3" stroke-width="2" stroke-linecap="round"/>
+                <rect x="9.4" y="14" width="5.2" height="8" rx="2.2" fill="#F5EFE3"/>
+              </g>
+              <g transform="translate(296 50) rotate(11) scale(2.7)">
+                <line x1="12" y1="22" x2="12" y2="9" stroke="#F5EFE3" stroke-width="2" stroke-linecap="round"/>
+                <rect x="5" y="3.5" width="14" height="6" rx="1.5" fill="#E0A526"/>
+              </g>
+              <path d="M330 118 q22 28 -8 44 q-30 16 -6 36 q24 20 56 4" fill="none" stroke="#F5EFE3" stroke-width="3" stroke-linecap="round" opacity=".75"/>
+              <g transform="translate(118 148) rotate(-6)">
+                <rect width="74" height="46" rx="5" fill="#F5EFE3"/>
+                <circle cx="11" cy="11" r="3.2" fill="#2C4634"/>
+                <text x="40" y="30" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700" fill="#1B1B16">14/06</text>
+              </g>
+            </svg>
+          </div>
+          <aside class="ticket" aria-label="Próximo encontro">
+            <div class="ticket-topo">
+              <span class="rotulo">Próximo encontro</span>
+              <span class="furo" aria-hidden="true"></span>
+            </div>
+            <p class="ticket-data">Sáb, 14 de junho</p>
+            <p class="ticket-linha"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>10h às 14h</p>
+            <p class="ticket-linha"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Salão da Associação, Rua das Acácias, 123</p>
+            <hr class="ticket-div">
+            <p class="contador-num"><span id="contador" data-target="312">312</span></p>
+            <p class="contador-rotulo">itens desviados do lixo desde 2023</p>
+            <p class="ticket-nota">Grátis. Leve até 2 itens por pessoa.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <ul>
+          <li>tênis com sola nova</li><li>rádio que voltou a tocar</li><li>cadeira com a perna firme</li><li>liquidificador religado</li><li>calça com zíper novo</li><li>carrinho que voltou a rodar</li><li>luminária acesa de novo</li><li>jaqueta com o forro remendado</li>
+        </ul>
+        <ul>
+          <li>tênis com sola nova</li><li>rádio que voltou a tocar</li><li>cadeira com a perna firme</li><li>liquidificador religado</li><li>calça com zíper novo</li><li>carrinho que voltou a rodar</li><li>luminária acesa de novo</li><li>jaqueta com o forro remendado</li>
+        </ul>
+      </div>
+    </div>
+    <p class="sr-only">Últimos consertos feitos no café: tênis com sola nova, rádio que voltou a tocar, cadeira com a perna firme, liquidificador religado, calça com zíper novo, carrinho que voltou a rodar, luminária acesa de novo e jaqueta com o forro remendado.</p>
+  </div>
+
+  <section class="claro" id="como-funciona" aria-labelledby="titulo-como">
+    <div class="container">
+      <div class="sec-cabecalho reveal">
+        <h2 id="titulo-como">Como funciona</h2>
+        <p>Sem fila invisível e sem surpresa no fim: é só chegar no dia com o seu item.</p>
+      </div>
+      <ol class="passos">
+        <li class="reveal" style="--d:.05s">
+          <span class="passo-num" aria-hidden="true">1</span>
+          <h3>Traga seu item</h3>
+          <p>No dia do encontro, leve o quebrado até o salão. Na entrada, a gente anota o que é e te entrega um número.</p>
+        </li>
+        <li class="reveal" style="--d:.15s">
+          <span class="passo-num" aria-hidden="true">2</span>
+          <h3>A gente diagnostica na hora</h3>
+          <p>Um voluntário assume o seu item, explica o que aconteceu e mostra o conserto enquanto trabalha.</p>
+        </li>
+        <li class="reveal" style="--d:.25s">
+          <span class="passo-num" aria-hidden="true">3</span>
+          <h3>Leve consertado, ou aprenda</h3>
+          <p>Se faltar peça, a gente indica onde comprar. Se não faltar, você sai sabendo fazer em casa na próxima vez.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="escuro" id="consertamos" aria-labelledby="titulo-consertamos">
+    <div class="container">
+      <div class="sec-cabecalho reveal">
+        <h2 id="titulo-consertamos">O que dá para consertar</h2>
+        <p>O grosso do que quebra em casa passa por aqui. E o que a gente não souber, a gente diz na hora.</p>
+      </div>
+      <ul class="categorias">
+        <li class="reveal" style="--d:.05s">
+          <svg class="ic" aria-hidden="true"><use href="#i-zap"/></svg>
+          <h3>Eletrônicos</h3>
+          <p>Rádios, fones, carregadores e controles.</p>
+        </li>
+        <li class="reveal" style="--d:.1s">
+          <svg class="ic" aria-hidden="true"><use href="#i-plug"/></svg>
+          <h3>Pequenos eletrodomésticos</h3>
+          <p>Liquidificador, torradeira e ferro de passar.</p>
+        </li>
+        <li class="reveal" style="--d:.15s">
+          <svg class="ic" aria-hidden="true"><use href="#i-shirt"/></svg>
+          <h3>Roupas e têxteis</h3>
+          <p>Zíper, bainha, botão e remendo.</p>
+        </li>
+        <li class="reveal" style="--d:.2s">
+          <svg class="ic" aria-hidden="true"><use href="#i-armchair"/></svg>
+          <h3>Móveis e madeira</h3>
+          <p>Cadeira bamba, gaveta emperrada, porta desalinhada.</p>
+        </li>
+        <li class="reveal" style="--d:.25s">
+          <svg class="ic" aria-hidden="true"><use href="#i-puzzle"/></svg>
+          <h3>Brinquedos</h3>
+          <p>Rodinha torta, pilha nova, peça faltando.</p>
+        </li>
+        <li class="reveal" style="--d:.3s">
+          <svg class="ic" aria-hidden="true"><use href="#i-bike"/></svg>
+          <h3>Bicicletas</h3>
+          <p>Freio, marcha e pneu furado.</p>
+        </li>
+      </ul>
+      <p class="aviso-escuro reveal">Não consertamos fogões a gás, micro-ondas ou nada com risco elétrico sem peça original. Nesses casos, indicamos para onde levar.</p>
+    </div>
+  </section>
+
+  <section class="claro" id="participe" aria-labelledby="titulo-participe">
+    <div class="container">
+      <div class="sec-cabecalho reveal">
+        <h2 id="titulo-participe">Participe do próximo encontro</h2>
+        <p>Preenche rapidinho e a gente confirma por e-mail até dois dias antes do evento.</p>
+      </div>
+      <div class="form-wrap reveal">
+        <form id="inscricao" novalidate>
+          <fieldset class="seg-group" style="border:0">
+            <legend class="sr-only">O que você quer fazer no encontro</legend>
+            <label class="seg">
+              <input type="radio" name="tipo" value="item" checked>
+              <span>Levar um item</span>
+            </label>
+            <label class="seg">
+              <input type="radio" name="tipo" value="voluntario">
+              <span>Ser voluntário</span>
+            </label>
+          </fieldset>
+          <div class="campo">
+            <label for="nome">Seu nome</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" aria-describedby="erro-nome">
+            <p class="erro" id="erro-nome" hidden>Precisamos do seu nome.</p>
+          </div>
+          <div class="campo">
+            <label for="email">Seu e-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" aria-describedby="erro-email">
+            <p class="erro" id="erro-email" hidden>Esse e-mail não parece válido.</p>
+          </div>
+          <div class="campo">
+            <label for="campo" id="campo-label">O que você vai trazer?</label>
+            <input type="text" id="campo" name="campo" aria-describedby="erro-campo" placeholder="Ex.: torradeira que não esquenta">
+            <p class="erro" id="erro-campo" hidden>Preenche esse campo pra gente saber o que esperar.</p>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar inscrição</button>
+          <p class="form-nota">Usamos seus dados só para organizar o evento. Nada de spam.</p>
+        </form>
+        <div class="sucesso" id="sucesso" role="status" hidden>
+          <h3 tabindex="-1" id="sucesso-titulo"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Pronto, <span id="ok-nome"></span>!</h3>
+          <p>Sua inscrição chegou. Te escrevemos até quinta-feira com o horário da sua vez no salão.</p>
+          <button type="button" class="btn btn-ghost claro-btn" id="nova-inscricao" style="border-color:var(--tinta);color:var(--tinta)">Fazer outra inscrição</button>
+        </div>
+        <noscript><p>Ative o JavaScript para enviar a inscrição, ou escreva para ola@cafedereparos.org.br.</p></noscript>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer escuro">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="wordmark" href="#topo">Café de Reparos<span class="dot">.</span></a>
+        <p>Encontros de conserto gratuitos feitos com as mãos pela comunidade do bairro.</p>
+      </div>
+      <div>
+        <h2>Onde e quando</h2>
+        <ul>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Salão da Associação, Rua das Acácias, 123</li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>Segundo sábado do mês, 10h às 14h</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Fale com a gente</h2>
+        <ul>
+          <li><a href="mailto:ola@cafedereparos.org.br">ola@cafedereparos.org.br</a></li>
+          <li>Respondemos em até 2 dias úteis.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Café de Reparos do bairro</span>
+      <span>Nada aqui é cobrado. Nunca.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var contador = document.getElementById("contador");
+  var alvo = parseInt(contador.getAttribute("data-target"), 10);
+  if (!reduceMotion) {
+    var inicio = null, duracao = 1400;
+    var passo = function(agora){
+      if (inicio === null) inicio = agora;
+      var p = Math.min(1, (agora - inicio) / duracao);
+      var e = 1 - Math.pow(1 - p, 3);
+      contador.textContent = String(Math.round(alvo * e));
+      if (p < 1) window.requestAnimationFrame(passo);
+    };
+    contador.textContent = "0";
+    window.requestAnimationFrame(passo);
+  }
+
+  var form = document.getElementById("inscricao");
+  var campoLabel = document.getElementById("campo-label");
+  var campo = document.getElementById("campo");
+  var textos = {
+    item: { label: "O que você vai trazer?", placeholder: "Ex.: torradeira que não esquenta" },
+    voluntario: { label: "O que você sabe consertar?", placeholder: "Ex.: costura, marcenaria, elétrica básica" }
+  };
+  function syncTipo(){
+    var v = form.querySelector("input[name='tipo']:checked").value;
+    campoLabel.textContent = textos[v].label;
+    campo.setAttribute("placeholder", textos[v].placeholder);
+  }
+  Array.prototype.forEach.call(form.querySelectorAll("input[name='tipo']"), function(r){
+    r.addEventListener("change", syncTipo);
+  });
+  syncTipo();
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-role]"), function(a){
+    a.addEventListener("click", function(){
+      var r = form.querySelector("input[value='" + a.getAttribute("data-role") + "']");
+      if (r) { r.checked = true; syncTipo(); }
+    });
+  });
+
+  var nome = document.getElementById("nome");
+  var email = document.getElementById("email");
+  var erroNome = document.getElementById("erro-nome");
+  var erroEmail = document.getElementById("erro-email");
+  var erroCampo = document.getElementById("erro-campo");
+  var sucesso = document.getElementById("sucesso");
+  var sucessoTitulo = document.getElementById("sucesso-titulo");
+  var okNome = document.getElementById("ok-nome");
+
+  function marcar(input, erro, invalido){
+    erro.hidden = !invalido;
+    if (invalido) { input.setAttribute("aria-invalid", "true"); }
+    else { input.removeAttribute("aria-invalid"); }
+    return !invalido;
+  }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var ok = true;
+    ok = marcar(nome, erroNome, nome.value.trim().length < 2) && ok;
+    ok = marcar(email, erroEmail, !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) && ok;
+    ok = marcar(campo, erroCampo, campo.value.trim().length < 3) && ok;
+    if (!ok) {
+      var primeiro = form.querySelector("[aria-invalid='true']");
+      if (primeiro) primeiro.focus();
+      return;
+    }
+    okNome.textContent = nome.value.trim().split(/\s+/)[0];
+    form.hidden = true;
+    sucesso.hidden = false;
+    sucessoTitulo.focus();
+  });
+
+  document.getElementById("nova-inscricao").addEventListener("click", function(){
+    sucesso.hidden = true;
+    form.hidden = false;
+    form.reset();
+    syncTipo();
+    nome.focus();
+  });
+})();
+</script>
+</body>
+</html>
